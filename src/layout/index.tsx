@@ -1,10 +1,7 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import { Header } from "./Header";
 import Head from "next/head";
-import { Box, List, ListItem, ListItemText, useTheme } from "@mui/material";
-import Image from "next/image";
-import LeftVerticalNavbar from "@/components/LeftVerticalNavbar";
+import { Footer } from "./Footer";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -26,6 +23,7 @@ export default function RootLayout({
       <Header />
       {/* <LeftVerticalNavbar /> */}
       <main dir="rtl">{children}</main>
+      <Footer />
     </>
   );
 }

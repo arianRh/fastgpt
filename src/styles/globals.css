@@ -25,13 +25,15 @@
   font-display: swap;
 }
 
+body {
+  background-image: url("/images/background.png");
+}
+
 html,
 body,
 #__next {
   padding: 0;
   margin: 0;
-  height: 100%;
-  overflow-y: "overlay";
   font-display: swap;
 }
 
@@ -41,4 +43,26 @@ body,
 }
 main {
   flex-grow: 1;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+  border-radius: 16px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #d9d9d959;
+  border-radius: 16px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 16px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
