@@ -2,6 +2,7 @@ import {
   TypographyOptions,
   TypographyStyleOptions,
 } from "@mui/material/styles/createTypography";
+import { customFont } from "../../../public/fonts/nextFonts";
 
 declare module "@mui/material/styles" {
   interface TypographyVariants {
@@ -22,8 +23,7 @@ declare module "@mui/material/Typography" {
 }
 
 export const typography: TypographyOptions = {
-  fontFamily:
-    "b koodak,Arial,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol",
+  fontFamily: customFont.style.fontFamily,
   h1: {
     fontWeight: 500,
     fontSize: "2.5rem",

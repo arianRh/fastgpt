@@ -387,6 +387,11 @@
   dependencies:
     glob "10.3.10"
 
+"@next/font@^14.2.6":
+  version "14.2.6"
+  resolved "https://registry.npmjs.org/@next/font/-/font-14.2.6.tgz"
+  integrity sha512-v0maCHn9a7UiMgzLBGUd/LzhhajEtJva8+Psi48IGrQ8PQfHb9MayO6BxhK/aP3/pE8Kd3JwibA06c0XPoms5A==
+
 "@next/swc-win32-x64-msvc@14.2.6":
   version "14.2.6"
   resolved "https://registry.npmjs.org/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-14.2.6.tgz"
@@ -2073,7 +2078,7 @@ natural-compare@^1.4.0:
   resolved "https://registry.npmjs.org/natural-compare/-/natural-compare-1.4.0.tgz"
   integrity sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==
 
-"next@^13.0.0 || ^14.0.0", next@14.2.6:
+next@*, "next@^13.0.0 || ^14.0.0", next@14.2.6:
   version "14.2.6"
   resolved "https://registry.npmjs.org/next/-/next-14.2.6.tgz"
   integrity sha512-57Su7RqXs5CBKKKOagt8gPhMM3CpjgbeQhrtei2KLAA1vTNm7jfKS+uDARkSW8ZETUflDCBIsUKGSyQdRs4U4g==
