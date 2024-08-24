@@ -15,7 +15,7 @@ export const Footer = () => {
         display: pathname === "/" || pathname === "/type" ? "none" : "flex",
         justifyContent: "center",
         zIndex: 998,
-        height: "97px",
+        height: "60px",
       }}
     >
       <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
