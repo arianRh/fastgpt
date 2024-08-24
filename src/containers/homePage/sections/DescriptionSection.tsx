@@ -12,7 +12,7 @@ export const DescriptionSection = () => {
       px={2}
       sx={{
         overflowY: "overlay",
-        height: "calc(100vh - 203px)",
+        height: "calc(100vh - 165px)",
         overflowX: "hidden",
         mt: "105px",
         pb: 10,
@@ -87,7 +87,7 @@ export const DescriptionSection = () => {
         item
         md={4.5}
         sx={{
-          display: "flex",
+          display: { md: "flex", xs: "none" },
           alignItems: "center",
           justifyContent: "center",
         }}

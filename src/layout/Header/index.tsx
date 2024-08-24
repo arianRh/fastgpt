@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 
 export const Header = () => {
   const { palette } = useTheme();
-  const { pathname } = useRouter();
+  const { pathname, push } = useRouter();
 
   return (
     <Grid
@@ -43,11 +43,20 @@ export const Header = () => {
         <Typography ml={1}>ورود</Typography>
       </Grid>
       <Grid item xs={1} sx={{ display: "flex", justifyContent: "center" }}>
-        <Image
+        <Box
+          component="img"
           src="/images/logo/logo.svg"
           alt="logo"
           width={100}
           height={100}
+          onClick={() => {
+            push("/");
+          }}
+          sx={{
+            "&:hover": {
+              cursor: "pointer",
+            },
+          }}
         />
       </Grid>
       <Grid
@@ -69,6 +78,9 @@ export const Header = () => {
               borderRadius: "25px",
               color: "#000",
               p: "0px !important",
+            }}
+            onClick={() => {
+              push("/comments");
             }}
           >
             <Typography variant="button">نظرات</Typography>

@@ -15,8 +15,10 @@ export const TypeSection = () => {
       px={2}
       sx={{
         overflowY: "overlay",
-        height: "calc(100vh - 0px)",
+        height: "calc(100vh - 105px)",
         overflowX: "hidden",
+        mt: "105px",
+        pb: { xs: "42px", md: 0 },
       }}
     >
       <Grid item md={12}>
@@ -24,9 +26,9 @@ export const TypeSection = () => {
           item
           md={12}
           sx={{
-            mt: "145px",
+            mt: "40px",
             width: "100%",
-            display: "flex",
+            display: { md: "flex", xs: "" },
             gap: "100px",
             justifyContent: "center",
           }}
@@ -43,8 +45,8 @@ export const TypeSection = () => {
               >
                 <Box
                   sx={{
-                    width: 200,
-                    height: 200,
+                    width: { md: 200, xs: 150 },
+                    height: { md: 200, xs: 150 },
                     border:
                       item !== "عادی"
                         ? `8px solid ${
@@ -53,7 +55,7 @@ export const TypeSection = () => {
                               : ""
                           }`
                         : "4px solid #2FB14D",
-                    outline: item === "حرفه ای" ? "8px solid #FF890D" : "",
+                    // outline: item === "حرفه ای" ? "8px solid #FF890D" : "",
                     boxShadow: "0px 4px 4px 0px #00000040",
                     borderRadius: "100%",
                     display: "flex",
@@ -61,11 +63,11 @@ export const TypeSection = () => {
                     justifyContent: "center",
                   }}
                 >
-                  <Image
+                  <Box
+                    component="img"
                     src="/images/user.svg"
-                    width={96}
-                    height={127}
                     alt="user"
+                    sx={{ width: { md: 96, xs: 70 }, height: 127 }}
                   />
                 </Box>
                 <Box
@@ -83,7 +85,11 @@ export const TypeSection = () => {
                     borderRadius: "31px",
                     py: "7px",
                     px: "25px",
-                    mt: item === "عادی" ? "38px" : "32px",
+                    mt: {
+                      md: item === "عادی" ? "38px" : "32px",
+                      xs: item === "عادی" ? "14px" : "20px",
+                    },
+                    mb: { xs: 4, md: 0 },
                   }}
                 >
                   <Typography
@@ -119,7 +125,7 @@ export const TypeSection = () => {
               fontWeight: 400,
               lineHeight: "31.25px",
               maxWidth: "1066px",
-              textAlign: "center",
+              textAlign: { md: "center", xs: "start" },
             }}
           >
             نوع کاربری: نوع کاربری شما بسته به تعداد همکاری های شما تغییر می‌کند
@@ -135,7 +141,7 @@ export const TypeSection = () => {
               fontWeight: 400,
               lineHeight: "31.25px",
               maxWidth: "1066px",
-              textAlign: "center",
+              textAlign: { md: "center", xs: "start" },
               mt: 2,
             }}
           >
@@ -149,7 +155,7 @@ export const TypeSection = () => {
               fontWeight: 400,
               lineHeight: "31.25px",
               maxWidth: "1066px",
-              textAlign: "center",
+              textAlign: { md: "center", xs: "start" },
             }}
           >
             و همچنین از مزایای کاربری حرفه‌ای می‌توان به بدون محدودیت بودن تعداد
