@@ -1,12 +1,21 @@
+"use client";
+
 import * as React from "react";
 import { useTheme } from "@mui/material/styles";
 import { Box, Grid, IconButton, Typography } from "@mui/material";
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { getCookie } from "cookies-next";
+import useAccountInfoStore from "@/store/accountInformation";
 
 export const Header = () => {
   const { palette } = useTheme();
   const { pathname, push } = useRouter();
+
+  const AccountInfo: { first_name?: string; last_name?: string } =
+    useAccountInfoStore((state) => state.AccountInformation);
+
+  console.log(AccountInfo);
 
   return (
     <Grid
@@ -40,7 +49,10 @@ export const Header = () => {
           width={38}
           height={38}
         />
-        <Typography ml={1}>ورود</Typography>
+        <Typography ml={1}>
+          {AccountInfo.first_name ? AccountInfo.first_name : "ورود"}
+          {AccountInfo.last_name ? AccountInfo.last_name : ""}
+        </Typography>
       </Grid>
       <Grid item xs={1} sx={{ display: "flex", justifyContent: "center" }}>
         <Box
