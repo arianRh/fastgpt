@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Header } from "./Header";
 import Head from "next/head";
 import { Footer } from "./Footer";
+import { LeftVerticalNavbar } from "@/components/LeftVerticalNavbar";
+import { Toaster } from "react-hot-toast";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,8 +23,10 @@ export default function RootLayout({
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Header />
-      {/* <LeftVerticalNavbar /> */}
-      <main dir="rtl">{children}</main>
+      <main dir="rtl">
+        <Toaster position="top-right" reverseOrder={false} />
+        {children}
+      </main>
       <Footer />
     </>
   );
